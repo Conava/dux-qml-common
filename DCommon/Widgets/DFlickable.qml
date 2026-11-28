@@ -55,7 +55,7 @@ Flickable {
     maximumFlickVelocity: Scroll.maximumFlickVelocity
     boundsBehavior: Flickable.StopAtBounds
     boundsMovement: Flickable.FollowBoundsBehavior
-    pressDelay: 0
+    pressDelay: touchPressDelay.pressDelay
     flickableDirection: horizontal ? Flickable.HorizontalFlick : Flickable.VerticalFlick
 
     WheelHandler {
@@ -252,6 +252,11 @@ Flickable {
                 flickable.momentumVelocity = 0;
             }
         }
+    }
+
+    DTouchPressDelay {
+        id: touchPressDelay
+        parent: flickable
     }
 
     Loader {

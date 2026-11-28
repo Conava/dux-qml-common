@@ -12,3 +12,5 @@ const velocitySampleWindowMs = 100;
 const momentumTimeThreshold = 50;
 const flickDeceleration = 1500;
 const maximumFlickVelocity = 2000;
+// Android's ViewConfiguration.TAP_TIMEOUT
+const tapTimeout = 100;
