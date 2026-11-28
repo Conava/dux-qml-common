@@ -40,7 +40,7 @@ GridView {
     maximumFlickVelocity: Scroll.maximumFlickVelocity
     boundsBehavior: Flickable.StopAtBounds
     boundsMovement: Flickable.FollowBoundsBehavior
-    pressDelay: 0
+    pressDelay: touchPressDelay.pressDelay
     flickableDirection: Flickable.VerticalFlick
 
     onMovementStarted: {
@@ -226,6 +226,11 @@ GridView {
                 momentumVelocity = 0;
             }
         }
+    }
+
+    DTouchPressDelay {
+        id: touchPressDelay
+        parent: gridView
     }
 
     Loader {

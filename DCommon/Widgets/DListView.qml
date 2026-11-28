@@ -129,7 +129,7 @@ ListView {
     maximumFlickVelocity: Scroll.maximumFlickVelocity
     boundsBehavior: Flickable.StopAtBounds
     boundsMovement: Flickable.FollowBoundsBehavior
-    pressDelay: 0
+    pressDelay: touchPressDelay.pressDelay
     flickableDirection: Flickable.VerticalFlick
 
     // A released delegate keeps painting at its old spot until deleteLater runs; Qt marks it with index -1.
@@ -402,6 +402,11 @@ ListView {
                 momentumVelocity = 0;
             }
         }
+    }
+
+    DTouchPressDelay {
+        id: touchPressDelay
+        parent: listView
     }
 
     Loader {
